@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Como funciona o JS?</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+<meta charset="UTF-8"/>
+</head>
+<body>
+
+<section class="center-container">
+<div class="center-content">
+<h2 class="sub">Como funciona o Javascript?</h2>
+<button class="teste">Click aqui</button>
+</div>
+</section>
+
+<style>
+*{
+padding: 0;margin: 0;box-sizing: border-box;
+}
+body {
+min-height: 100vh;
+}
+.center-container {
+background: url("img/bg-image.jpg") top center no-repeat;background-size: cover;min-height: 100vh;position: relative;display:flex;justify-content: center;align-items:center;flex-wrap: no-wrap;
+}
+.center-content {
+display: flex;align-items: center;justify-content: space-between;flex-direction: column;gap: 0.75rem;position: absolute;
+}
+.sub {
+font-family: sans-serif;color: #fff;font-size: 3.5rem;text-shadow: 2.5px 5px 7px #000;cursor: default;text-align:center;
+}
+.teste {
+outline: none;border: none;background: #0f0;border-radius: 25px;cursor: pointer;width: 12.5rem;padding: 0.75rem;color: #111;font-family: monospace;font-size: 1.5rem;font-weight: bold;transition: .7s;
+}
+.teste:hover {
+color: #0f0;background: #111;
+}
+
+@media (orientation: portrait){
+
+.center-container {
+background: url("img/bg-image-mob.jpg") no-repeat;background-size: cover;
+}
+
+}
+</style>
+
+<script>
+let btn = document.querySelector(".teste");
+
+btn.onclick = ()=> {
+window.open("video/narga.webm","_self");
+}
+</script>
+
+</body>
+</html> 
