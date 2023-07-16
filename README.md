@@ -7,10 +7,5 @@
 <p>para ir pra minha página principal clica no link abaixo</p>
 <a href="https://midorisenpai.github.io/projectJs/" target="_self" >Click aqui</a>
 <p>e bom vlw e flw !!!</p>
-<style>
-h1 {
-color: #0f0;
-}
-</style>
 </body>
 </html>
