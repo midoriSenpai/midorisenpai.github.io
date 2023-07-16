@@ -6,11 +6,11 @@
 <meta charset="UTF-8"/>
 </head>
 <body>
-
+<!--Opa opa, não estraga a brincadeira não tenta descobrir o segredo sozinho(a), sem olhar no codigo bb kk-->
 <section class="center-container">
 <div class="center-content">
 <h2 class="sub">Como funciona o Javascript?</h2>
-<button class="teste">Click aqui</button>
+<button class="btn">Click aqui</button>
 </div>
 </section>
 
@@ -22,7 +22,7 @@ body {
 min-height: 100vh;
 }
 .center-container {
-background: url("img/bg-image.jpg") top center no-repeat;background-size: cover;min-height: 100vh;position: relative;display:flex;justify-content: center;align-items:center;flex-wrap: no-wrap;
+background: url("img/bg-image.jpg") top center no-repeat;background-size: cover;min-height: 100vh;position: relative;display:flex;justify-content: center;align-items:center;flex-wrap: nowrap;
 }
 .center-content {
 display: flex;align-items: center;justify-content: space-between;flex-direction: column;gap: 0.75rem;position: absolute;
@@ -30,10 +30,10 @@ display: flex;align-items: center;justify-content: space-between;flex-direction:
 .sub {
 font-family: sans-serif;color: #fff;font-size: 3.5rem;text-shadow: 2.5px 5px 7px #000;cursor: default;text-align:center;
 }
-.teste {
+.btn {
 outline: none;border: none;background: #0f0;border-radius: 25px;cursor: pointer;width: 12.5rem;padding: 0.75rem;color: #111;font-family: monospace;font-size: 1.5rem;font-weight: bold;transition: .7s;
 }
-.teste:hover {
+.btn:hover {
 color: #0f0;background: #111;
 }
 
@@ -47,10 +47,21 @@ background: url("img/bg-image-mob.jpg") no-repeat;background-size: cover;
 </style>
 
 <script>
-let btn = document.querySelector(".teste");
+let btn = document.querySelector(".btn");
+let sub = document.querySelector(".sub");
+let i = 0;
 
 btn.onclick = ()=> {
 window.open("video/narga.webm","_self");
+}
+
+sub.onclick = () => {
+ i++;
+  if(i == 3){
+   window.open("img/easterEgg.jpg","_blank");
+   i=0;
+   alert("Meus parabéns, vc tem muito tempo livre!!!");
+  }
 }
 </script>
 
