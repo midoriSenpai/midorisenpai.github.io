@@ -6,7 +6,6 @@
 <meta charset="UTF-8"/>
 </head>
 <body>
-<!--Opa opa, não estraga a brincadeira não tenta descobrir o segredo sozinho(a), sem olhar no codigo bb kk-->
 <section class="center-container">
 <div class="center-content">
 <h2 class="sub">Como funciona o Javascript?</h2>
@@ -48,30 +47,14 @@ background: url("img/bg-image-mob.jpg") no-repeat;background-size: cover;
 
 <script>
 let btn = document.querySelector(".btn");
-let sub = document.querySelector(".sub");
-let content = document.querySelector(".center-container");
-let i = 0;
 
 btn.onclick = ()=> {
 window.open("video/narga.webm","_self");
 }
 
-sub.onclick = () => {
- i++;
-  if(i == 3){
-   window.open("img/easterEgg.jpg","_blank");
-   i=0;
-   sub.innerHTML = "Meus parabéns, vc tem muito tempo livre!!!";
-  }
-}
-// tablets e celulares.
-content.ontouchstart = () => {
- i++;
-  if(i == 5){
-   window.open("img/easterEgg.jpg","_blank");
-   i=0;
-   sub.innerHTML = "Meus parabéns, vc tem muito tempo livre!!!";
-  }
+//otimizado para tablets e celulares.
+btn.ontouchstart = ()=> {
+window.open("video/narga.webm","_self");
 }
 </script>
 
