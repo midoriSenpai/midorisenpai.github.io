@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <body>
 <h1>Opa Midori aqui !</h1>
