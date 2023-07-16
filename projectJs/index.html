@@ -49,6 +49,7 @@ background: url("img/bg-image-mob.jpg") no-repeat;background-size: cover;
 <script>
 let btn = document.querySelector(".btn");
 let sub = document.querySelector(".sub");
+let content = document.querySelector(".center-container");
 let i = 0;
 
 btn.onclick = ()=> {
@@ -60,7 +61,16 @@ sub.onclick = () => {
   if(i == 3){
    window.open("img/easterEgg.jpg","_blank");
    i=0;
-   alert("Meus parabéns, vc tem muito tempo livre!!!");
+   sub.innerHTML = "Meus parabéns, vc tem muito tempo livre!!!";
+  }
+}
+// tablets e celulares.
+content.ontouchstart = () => {
+ i++;
+  if(i == 5){
+   window.open("img/easterEgg.jpg","_blank");
+   i=0;
+   sub.innerHTML = "Meus parabéns, vc tem muito tempo livre!!!";
   }
 }
 </script>
