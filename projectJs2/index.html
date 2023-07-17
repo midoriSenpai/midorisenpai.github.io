@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>100 nada pra fazer?</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+</head>
+
+<body>
+<section class="center-container">
+	<div class="center-content">
+		<h2 class="sub">Clique 10x vezes no botão</h2>
+		<button class="btn">Click aqui</button>
+        <p class="count"></p>
+	</div>
+</section>
+
+<style>
+* {
+margin: 0;padding: 0;box-sizing: border-box;
+}
+body {
+min-height: 100vh;
+}
+.center-container {
+background: url("img/bg-image.jpeg") top center no-repeat;background-size: cover;display: flex;justify-content: center;align-items: center;min-height: 100vh;
+}
+.center-content {
+display: flex;flex-direction: column;justify-content: space-between;align-items: center;row-gap: 1.5px;margin-top: 100px;
+}
+.sub {
+font-size: 40px;font-family: sans-serif;color: #fff;padding: 5px 0;text-align: center;text-shadow: 2.5px 5px 7px #000;
+}
+.btn {
+border: none;outline: none;width: 200px;padding: 14px;border-radius: 50px;background: #0f0;color: #222;text-align: center;font-size: 22px;font-family: monospace;font-weight: bold;cursor: pointer;transition: .7s;
+}
+.btn:hover {
+background: #f0f;color: #fff;
+}
+.count {
+font-size: 75px;font-family: sans-serif;color: #fff;padding: 2.5px 0;text-align: center;text-shadow: 2.5px 5px 7px #000;font-weight: bold;
+}
+
+/*monitores 4k e smart TVs*/
+
+@media (min-width: 2160px) and (orientation: landscape) {
+
+.center-container {
+justify-content: right;padding-right: 100px;
+}
+.center-content {
+margin-top: 150px;
+}
+.sub {
+font-size: 80px;
+}
+.btn {
+width: 400px;padding: 28px;border-radius: 100px;font-size: 44px;
+}
+.count {
+font-size: 150px;
+}
+
+}
+
+@media (min-height: 1440px) and (orientation: portrait) {
+
+.center-content {
+margin-top: 150px;
+}
+.sub {
+font-size: 80px;
+}
+.btn {
+width: 400px;padding: 28px;border-radius: 100px;font-size: 44px;
+}
+.count {
+font-size: 150px;
+}
+
+}
+
+/*celulares e tablets*/
+
+@media (max-height: 450px) and (orientation: landscape) {
+
+.center-content {
+margin-top: 75px;
+}
+.sub {
+font-size: 30px;
+}
+.btn {
+width: 150px;padding: 8.5px;border-radius: 25px;font-size: 12.5px;
+}
+.count {
+font-size: 50px;
+}
+
+}
+
+
+@media (max-width: 680px) and (orientation: portrait){
+
+.center-content {
+margin-top: 50px;
+}
+.sub {
+font-size: 25px;
+}
+.btn {
+width: 100px;padding: 7px;border-radius: 25px;font-size: 11px;
+}
+.count {
+font-size: 40px;
+}
+
+}
+
+</style>
+
+<script>
+let btn = document.querySelector(".btn");
+let sub = document.querySelector(".sub");
+let count = document.querySelector(".count");
+let i = 0;
+
+count.innerHTML = i;
+
+btn.onclick = ()=> {
+i++;
+	if(i == 10){
+    window.open("video/parabains.mp4","_blank");
+     sub.innerHTML ="agora click 100 vezes no botão!!!";
+    }
+    if(i == 100){
+     sub.innerHTML ="Parábens,você foi trollado(a)!";
+     i=0;
+    }
+count.innerHTML = i;
+}
+
+// celulares e tablets.
+
+btn.ontouchstart = ()=> {
+i++;
+	if(i == 10){
+    window.open("video/parabains.mp4","_blank");
+     sub.innerHTML ="agora click 100 vezes no botão!!!";
+    }
+    if(i == 100){
+     sub.innerHTML ="Parábens,você foi trollado(a)!";
+     i=0;
+    }
+count.innerHTML = i;
+}
+</script>
+
+</body>
+</html>
+
+
