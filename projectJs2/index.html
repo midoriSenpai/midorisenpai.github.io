@@ -12,7 +12,7 @@
 	<div class="center-content">
 		<h2 class="sub">Clique 10x vezes no botão</h2>
 		<button class="btn">Click aqui</button>
-        <p class="count"></p>
+        	<p class="count"></p>
 	</div>
 </section>
 
@@ -149,29 +149,32 @@ count.innerHTML = i;
 
 btn.onclick = ()=> {
 i++;
-	if(i == 10){
+if(i == 10){
     window.open("video/parabains.mp4","_blank");
-     sub.innerHTML ="agora click 100 vezes no botão!!!";
-    }
+    sub.innerHTML ="agora click 100 vezes no botão!!!";
+}else 
     if(i == 100){
-     sub.innerHTML ="Parábens,você foi trollado(a)!";
-     i=0;
+      sub.innerHTML ="Parábens,você foi trollado(a)!";
+      i=0;
     }
 count.innerHTML = i;
 }
 
 // celulares e tablets.
 
-btn.ontouchstart = ()=> {
+btn.ontouchstart = (e)=> {
+if(e.type === "touchstart"){
+ e.preventDefault();
+}
 i++;
-	if(i == 10){
-    window.open("video/parabains.mp4","_blank");
+    if(i == 10){
+     window.open("video/parabains.mp4","_blank");
      sub.innerHTML ="agora click 100 vezes no botão!!!";
-    }
-    if(i == 100){
-     sub.innerHTML ="Parábens,você foi trollado(a)!";
-     i=0;
-    }
+    }else
+        if(i == 100){
+          sub.innerHTML ="Parábens,você foi trollado(a)!";
+          i=0;
+        }
 count.innerHTML = i;
 }
 </script>
