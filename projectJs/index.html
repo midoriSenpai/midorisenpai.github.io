@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>Como funciona o JS?</title>
-<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
-<meta charset="UTF-8"/>
+	<title>Como funciona o JS?</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+	<meta charset="UTF-8"/>
 </head>
+
 <body>
 <section class="center-container">
-<div class="center-content">
-<h2 class="sub">Como funciona o Javascript?</h2>
-<button class="btn">Click aqui</button>
-</div>
+	<div class="center-content">
+		<h2 class="sub">Como funciona o Javascript?</h2>
+		<button class="btn">Click aqui</button>
+	</div>
 </section>
 
 <style>
@@ -21,10 +22,10 @@ body {
 min-height: 100vh;
 }
 .center-container {
-background: url("img/bg-image.jpg") top center no-repeat;background-size: cover;min-height: 100vh;position: relative;display:flex;justify-content: center;align-items:center;flex-wrap: nowrap;
+background: url("img/bg-image.jpg") top center no-repeat;background-size: cover;min-height: 100vh;position: relative;display:flex;justify-content: center;align-items:center;
 }
 .center-content {
-display: flex;align-items: center;justify-content: space-between;flex-direction: column;gap: 0.75rem;position: absolute;
+display: flex;align-items: center;justify-content: space-between;flex-direction: column;row-gap: 0.75rem;position: absolute;
 }
 .sub {
 font-family: sans-serif;color: #fff;font-size: 3.5rem;text-shadow: 2.5px 5px 7px #000;cursor: default;text-align:center;
@@ -53,7 +54,10 @@ window.open("video/narga.webm","_self");
 }
 
 //otimizado para tablets e celulares.
-btn.ontouchstart = ()=> {
+btn.ontouchstart = (e)=> {
+if(e.type === "touchstart"){
+	e.preventDefault();
+}
 window.open("video/narga.webm","_self");
 }
 </script>
