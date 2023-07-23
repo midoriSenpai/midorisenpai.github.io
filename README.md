@@ -5,9 +5,9 @@
 <br>
 <strong>e... tu é curioso em macho? kk</strong>
 <p>escolha um dos links clique e seja feliz: </p>
-<a href="https://midorisenpai.github.io/projectJs/" target="_self" >Project Js 1 v1.1</a>
+<a href="https://midorisenpai.github.io/projectJs/" target="_self" >Project Js 1 v1.4</a>
 <br>
-<a href="https://midorisenpai.github.io/projectJs2/" target="_self">Project Js 2 v.1.2</a>
+<a href="https://midorisenpai.github.io/projectJs2/" target="_self">Project Js 2 v.1.3</a>
 <p>e bom vlw e flw !!!</p>
 </body>
 </html>
