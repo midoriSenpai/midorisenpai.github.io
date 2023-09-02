@@ -8,6 +8,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 </head>
 <body>
+<section class="loading">
+	<div class="loading-container">
+      		<img src="img/Js-Loading.png"/>
+      		<p class="txtLoad"></p>
+	</div>
+</section>
 
 <section class="center-container">
 	<div class="center-content">
@@ -19,14 +25,6 @@
 		<p class="copyText"></p>
 	</div>
 </section>
-
-<section class="loading">
-	<div class="loading-container">
-      		<img src="img/Js-Loading.png"/>
-      		<p class="txtLoad"></p>
-	</div>
-</section>
-
 <style>
 * {
 padding: 0;margin: 0;box-sizing: border-box;
@@ -288,28 +286,30 @@ font-family: 'Special Elite', cursive;color: #fff;font-size: 25px;cursor: defaul
 
 <script>
 const userInput = document.querySelector("#userText");
-const copyText = document.querySelector(".copyText");
 
-const pageLoad = document.querySelector(".loading");
-setTimeout( ()=> {
-	pageLoad.style.display = "none";
-},2500);
+pageLoading();
+
+function pageLoading(){
+const pageLoad = document.querySelector(".loading"), txt = "carregando...", txtLoad = document.querySelector(".txtLoad");
+let i=0;
+
+  setTimeout( ()=> {
+      pageLoad.style.display = "none";
+  },2500);
 
 //efeito de texto do loading
 
-const txt = "carregando...";
-const txtLoad = document.querySelector(".txtLoad");
-let i=0;
 let interval = setInterval( ()=> {
- if(i < txt.length){
-    	txtLoad.innerHTML += txt.charAt(i);
-    	i++;
- }
- if(i == txt.length){
-  	clearInterval(interval);
- }
+	if(i < txt.length){
+		txtLoad.innerHTML += txt.charAt(i);
+		i++;
+	}
+	if(i == txt.length){
+		clearInterval(interval);
+	}
 },100);
 
+}
 
 userInput.onchange = ()=> {
 typerWriter();
@@ -317,41 +317,37 @@ typerWriter();
 
 function typerWriter(){
 const text = userInput.value;
-i=0;
+const copyText = document.querySelector(".copyText");
+let i=0;
 copyText.style.display = "block";
 copyText.innerHTML = "";
 
 if(text == "easter egg"){
 
-let name = prompt("Digite seu nome: ");
-if(name == null){
-	name = "";
-}
+const name = prompt("Calculadora de Média Aritmética\n> Digite seu nome: ") || "";
 let flag = true;
 
-  while(flag){
-    let num = prompt("Digite um número maior que zero: ");
-    let sum = num, media = 0, qtd = 0;
+while(flag){
+      let num = parseFloat(prompt("Digite um número maior que zero: "));
+      let sum = num, media = 0, qtd = 0;
 
-    while(num > 0 && num != null){
-      num = prompt("Digite um número: > digite 0 para calcular a média");
-      sum = parseFloat(sum) + parseFloat(num);
-      qtd++;
-    }
-
-      if(sum > 0 && sum != null){
-          media = parseFloat(sum)/qtd;
-          alert("A sua média é: " + parseFloat(media.toFixed(2)));
-      }else{
-          alert("Entrada inválida!!!");
+      while(num > 0 && isNaN(num) == false){
+        num = parseFloat(prompt("Digite um número não negativo: \n> digite 0 para calcular a média"));
+        sum += num;
+        qtd++;
       }
 
-      if(confirm(name + " deseja fazer outra média entre números?") == true){
-          flag = true;
+      if(qtd < 0 || isNaN(num)){
+         alert("Entrada inválida!!!");
       }else{
-          flag = false;
+         media = sum/qtd;
+         alert("A sua média é: " + parseFloat(media.toFixed(2)));
       }
-  }
+
+      flag = confirm(name + " deseja fazer outra média entre números?");
+}
+
+
 }
 
 let intervalo = setInterval( ()=> {
@@ -368,7 +364,6 @@ let intervalo = setInterval( ()=> {
   }
  },100);
 }
-
 </script>
 
 </body>
