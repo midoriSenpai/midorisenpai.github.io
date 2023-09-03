@@ -351,17 +351,17 @@ while(flag){
 }
 
 let intervalo = setInterval( ()=> {
-  if(i < text.length){
-    copyText.innerHTML += text.charAt(i);
-    i++;
-    userInput.style.pointerEvents = "none";
-    userInput.style.color = "#eb3160";
-  }
-  if(i == text.length){
-    clearInterval(intervalo);
-    userInput.style.pointerEvents = "auto";
-    userInput.style.color = "#111";
-  }
+	if(i < text.length){
+		copyText.innerHTML += text.charAt(i);
+		i++;
+		userInput.style.pointerEvents = "none";
+		userInput.style.color = "#eb3160";
+  	}else
+		if(i == text.length){
+			clearInterval(intervalo);
+			userInput.style.pointerEvents = "auto";
+			userInput.style.color = "#111";
+  		}
  },100);
 }
 </script>
